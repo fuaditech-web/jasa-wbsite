@@ -1,78 +1,157 @@
-// Hamburger Menu
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.querySelector('.nav-links');
+// ============================================
+// FUADITECH STUDIO - MAIN JAVASCRIPT
+// ============================================
 
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function() {
+
+    // ---------- NAVBAR SCROLL ----------
+    const navbar = document.querySelector('.navbar');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        lastScroll = currentScroll;
     });
-}
 
-// Close menu on link click
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
-});
+    // ---------- HAMBURGER MENU ----------
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-// Mobile dropdown toggle
-const dropdown = document.querySelector('.dropdown');
-if (window.innerWidth <= 768 && dropdown) {
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    if (dropdownToggle) {
-        dropdownToggle.addEventListener('click', (e) => {
-            e.preventDefault();
-            dropdown.classList.toggle('active');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                navLinks.classList.remove('active');
+                const icon = hamburger.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+            }
         });
     }
-}
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href && href !== '#' && href !== '#home' && href !== '#tentang' && href !== '#layanan-website' && href !== '#layanan-ai' && href !== '#layanan-programming' && href !== '#layanan-sistem' && href !== '#layanan-akademik' && href !== '#layanan-desain' && href !== '#layanan-artikel') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
+    // Close menu on link click (mobile)
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
+                const icon = hamburger?.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
             }
-        }
+        });
     });
-});
 
-// Contact form to WhatsApp
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = contactForm.querySelector('input[placeholder="Nama Lengkap"]').value;
-        const email = contactForm.querySelector('input[placeholder="Email"]').value;
-        const message = contactForm.querySelector('textarea').value;
-        const waNumber = '62882007027443';
-        const text = `Halo FUADITECH STUDIO,%0A%0ANama: ${name}%0AEmail: ${email}%0APesan: ${message}`;
-        window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
-    });
-}
+    // ---------- MOBILE DROPDOWN ----------
+    const dropdown = document.querySelector('.dropdown');
+    if (dropdown) {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        if (toggle) {
+            toggle.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+    }
 
-// Active nav highlight on scroll
-const sections = document.querySelectorAll('section[id]');
-window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollY = window.scrollY + 100;
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
+    // Reset dropdown on resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && dropdown) {
+            dropdown.classList.remove('active');
         }
     });
-    document.querySelectorAll('.nav-links > li > a').forEach(link => {
-        const href = link.getAttribute('href');
-        if (href && href.substring(1) === current) {
-            link.classList.add('active');
-        } else if (href && href !== '#') {
-            link.classList.remove('active');
-        }
+
+    // ---------- SMOOTH SCROLL ----------
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#') {
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
     });
+
+    // ---------- ACTIVE NAV LINK ----------
+    const sections = document.querySelectorAll('section[id]');
+    const navLinksAll = document.querySelectorAll('.nav-links > li > a:not(.dropdown-toggle)');
+
+    window.addEventListener('scroll', function() {
+        let current = '';
+        const scrollY = window.scrollY + 120;
+
+        sections.forEach(function(section) {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinksAll.forEach(function(link) {
+            const href = link.getAttribute('href');
+            if (href && href.substring(1) === current) {
+                link.classList.add('active');
+            } else if (href && href !== '#') {
+                link.classList.remove('active');
+            }
+        });
+    });
+
+    // ---------- CONTACT FORM ----------
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = this.querySelector('input[placeholder="Nama Lengkap"]')?.value || '';
+            const email = this.querySelector('input[placeholder="Email"]')?.value || '';
+            const message = this.querySelector('textarea')?.value || '';
+            const waNumber = '62882007027443';
+            const text = `Halo FUADITECH STUDIO,%0A%0ANama: ${name}%0AEmail: ${email}%0APesan: ${message}`;
+            window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
+        });
+    }
+
+    // ---------- ANIMATE ON SCROLL (simple) ----------
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    animateElements.forEach(function(el) {
+        observer.observe(el);
+    });
+
+    console.log('🚀 FUADITECH STUDIO loaded successfully!');
 });
