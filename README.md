@@ -1,51 +1,40 @@
 # 🚀 FUADITECH STUDIO
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" alt="Version" />
-  <img src="https://img.shields.io/badge/Status-Active-success.svg" alt="Status" />
-  <img src="https://img.shields.io/badge/HTML-5-orange.svg" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS-3-blue.svg" alt="CSS3" />
-  <img src="https://img.shields.io/badge/JavaScript-ES6-yellow.svg" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" />
+  <img src="https://img.shields.io/badge/Website-FUADITECH%20STUDIO-00E5FF?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Status-Live-00E5FF?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Version-2.0.0-00E5FF?style=for-the-badge">
 </div>
 
-<br />
+## 📌 Tentang Project
 
-> **Solusi Digital Profesional & Terjangkau untuk Bisnis, Mahasiswa, dan UMKM**
+FUADITECH STUDIO adalah website profesional untuk layanan pembuatan website, solusi AI, joki coding, dan sistem digital.
 
-FUADITECH STUDIO adalah website company profile yang menampilkan jasa pembuatan website, AI chatbot, joki coding, dan sistem informasi dengan harga mulai dari **Rp20.000**. Dibangun dengan teknologi modern dan desain yang profesional.
+## ✨ Fitur
 
----
+- ✅ 8+ Layanan Unggulan
+- ✅ 4 Paket Harga Terjangkau
+- ✅ Desain Modern & Responsive
+- ✅ SEO Friendly
+- ✅ PWA (Install ke HP)
+- ✅ Google Analytics
 
-## ✨ Fitur Utama
+## 🛠️ Teknologi
 
-| Fitur | Deskripsi |
-|-------|-----------|
-| 🎨 **Modern UI/UX** | Desain profesional dengan animasi halus dan efek glassmorphism |
-| 📱 **Responsive Design** | Tampilan optimal di semua perangkat (Desktop, Tablet, Mobile) |
-| 🧭 **Navigation** | Fixed navbar dengan dropdown menu dan highlight aktif |
-| 💬 **WhatsApp Integration** | Tombol konsultasi dan form kontak terhubung langsung ke WhatsApp |
-| 🚀 **Smooth Animations** | Floating cards, gradient spheres, dan scroll animations |
-| 📊 **Service Catalog** | 22+ layanan digital dengan harga transparan |
-| ⭐ **Testimonials** | Review dari klien nyata |
-| 📱 **Mobile Menu** | Hamburger menu dengan dropdown untuk mobile |
+- HTML5, CSS3, JavaScript
+- FontAwesome, Google Fonts
+- GitHub Pages
 
----
+## 🌐 Akses Online
 
-## 🛠️ Teknologi yang Digunakan
+[https://fuaditech-web.github.io/jasa-wbsite/](https://fuaditech-web.github.io/jasa-wbsite/)
 
-### Frontend
-- **HTML5** - Semantic markup
-- **CSS3** - Custom properties, Flexbox, Grid, Animations
-- **JavaScript (ES6)** - DOM manipulation, event handling
-- **Font Awesome** - Icons library
-- **Google Fonts (Inter)** - Typography
+## 📱 Kontak
 
-### Tools & Libraries
-- **Font Awesome 6.5.0** - Icon set
-- **Inter Font** - Modern sans-serif font
-- **Unsplash** - Background images
+- WhatsApp: 0882-0070-27443
+- Email: fuaditech@gmail.com
+- Instagram: @fuaditechstudio
 
 ---
 
-## 📁 Struktur Project
+**© 2026 FUADITECH STUDIO | Build Smart. Grow Faster.**
