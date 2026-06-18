@@ -3,7 +3,7 @@
 <div align="center">
   <img src="https://img.shields.io/badge/Website-FUADITECH%20STUDIO-00E5FF?style=for-the-badge">
   <img src="https://img.shields.io/badge/Status-Live-00E5FF?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Version-2.0.0-00E5FF?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Version-3.0.0-00E5FF?style=for-the-badge">
 </div>
 
 ## 📌 Tentang Project
@@ -12,18 +12,13 @@ FUADITECH STUDIO adalah website profesional untuk layanan pembuatan website, sol
 
 ## ✨ Fitur
 
-- ✅ 8+ Layanan Unggulan
+- ✅ 7 Halaman (Home, Tentang, Layanan, Portofolio, Harga, Testimoni, Kontak)
+- ✅ 19+ Layanan Digital
 - ✅ 4 Paket Harga Terjangkau
 - ✅ Desain Modern & Responsive
 - ✅ SEO Friendly
 - ✅ PWA (Install ke HP)
 - ✅ Google Analytics
-
-## 🛠️ Teknologi
-
-- HTML5, CSS3, JavaScript
-- FontAwesome, Google Fonts
-- GitHub Pages
 
 ## 🌐 Akses Online
 
