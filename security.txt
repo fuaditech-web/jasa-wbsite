@@ -1,0 +1,6 @@
+# Security.txt untuk FUADITECH STUDIO
+Contact: mailto:fuaditech@gmail.com
+Contact: https://wa.me/62882007027443
+Expires: 2027-01-01T00:00:00.000Z
+Preferred-Languages: id, en
+Canonical: https://fuaditech-web.github.io/jasa-wbsite/security.txt
