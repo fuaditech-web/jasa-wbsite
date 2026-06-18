@@ -4,7 +4,7 @@ Allow: /
 Disallow: /404.html
 
 # Sitemap
-Sitemap: https://muhammadfuadi418-sketch.github.io/fuaditechstudio/sitemap.xml
+Sitemap: https://fuaditech-web.github.io/jasa-wbsite/sitemap.xml
 
 # Crawl delay
 Crawl-delay: 5
