@@ -1,0 +1,10 @@
+# Robots.txt untuk FUADITECH STUDIO
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+# Sitemap
+Sitemap: https://muhammadfuadi418-sketch.github.io/fuaditechstudio/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 5
