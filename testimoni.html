@@ -11,8 +11,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1B8P5EC0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-NK1B8P5EC0');
     </script>
@@ -24,16 +23,23 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                FUADITECH<br />
-                <span class="logo-studio">STUDIO</span>
+                <a href="index.html" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:white;">
+                    <img src="assets/images/logo.png" alt="FUADITECH STUDIO" style="height:40px; width:auto;" />
+                    <div>
+                        FUADITECH<br />
+                        <span class="logo-studio">STUDIO</span>
+                    </div>
+                </a>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tentang.html">Tentang</a></li>
                 <li><a href="layanan.html">Layanan</a></li>
                 <li><a href="portofolio.html">Portofolio</a></li>
+                <li><a href="publikasi.html">Publikasi</a></li>
                 <li><a href="harga.html">Harga</a></li>
                 <li><a href="testimoni.html" class="active">Testimoni</a></li>
+                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="kontak.html">Kontak</a></li>
             </ul>
             <a href="https://wa.me/62882007027443" class="btn-konsultasi" target="_blank">Konsultasi Gratis</a>
@@ -50,44 +56,44 @@
     </section>
 
     <!-- ===== TESTIMONI ===== -->
-    <section class="testimoni" style="background:#0A0A0F;">
+    <section style="padding:80px 0; background:#0A0A0F;">
         <div class="container">
-            <div class="testimoni-grid">
-                <div class="testimoni-card">
-                    <i class="fas fa-quote-left"></i>
-                    <p>"Website company profile saya jadi super modern. Harga terjangkau banget!"</p>
-                    <h4>- Andi Wijaya</h4>
-                    <span>Owner Cafe</span>
+            <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:30px;">
+                <div style="background:#111827; border-radius:20px; padding:30px; border:1px solid #1F2937;">
+                    <i style="color:#00E5FF; font-size:2rem; margin-bottom:15px; opacity:0.5;" class="fas fa-quote-left"></i>
+                    <p style="color:#D1D5DB; line-height:1.6; margin-bottom:15px;">"Website company profile saya jadi super modern. Harga terjangkau banget!"</p>
+                    <h4 style="margin-bottom:5px;">- Andi Wijaya</h4>
+                    <span style="color:#9CA3AF; font-size:0.8rem;">Owner Cafe</span>
                 </div>
-                <div class="testimoni-card">
-                    <i class="fas fa-quote-left"></i>
-                    <p>"Joki coding skripsi rapi, nilai A! Recommended untuk mahasiswa."</p>
-                    <h4>- Siti Rahma</h4>
-                    <span>Mahasiswa</span>
+                <div style="background:#111827; border-radius:20px; padding:30px; border:1px solid #1F2937;">
+                    <i style="color:#00E5FF; font-size:2rem; margin-bottom:15px; opacity:0.5;" class="fas fa-quote-left"></i>
+                    <p style="color:#D1D5DB; line-height:1.6; margin-bottom:15px;">"Joki coding skripsi rapi, nilai A! Recommended untuk mahasiswa."</p>
+                    <h4 style="margin-bottom:5px;">- Siti Rahma</h4>
+                    <span style="color:#9CA3AF; font-size:0.8rem;">Mahasiswa</span>
                 </div>
-                <div class="testimoni-card">
-                    <i class="fas fa-quote-left"></i>
-                    <p>"Makalah ilmiah jadi cepat dan rapi, harga cuma Rp70.000!"</p>
-                    <h4>- Budi Santoso</h4>
-                    <span>Mahasiswa</span>
+                <div style="background:#111827; border-radius:20px; padding:30px; border:1px solid #1F2937;">
+                    <i style="color:#00E5FF; font-size:2rem; margin-bottom:15px; opacity:0.5;" class="fas fa-quote-left"></i>
+                    <p style="color:#D1D5DB; line-height:1.6; margin-bottom:15px;">"Makalah ilmiah jadi cepat dan rapi, harga cuma Rp70.000!"</p>
+                    <h4 style="margin-bottom:5px;">- Budi Santoso</h4>
+                    <span style="color:#9CA3AF; font-size:0.8rem;">Mahasiswa</span>
                 </div>
-                <div class="testimoni-card">
-                    <i class="fas fa-quote-left"></i>
-                    <p>"AI Chatbot untuk customer service 24 jam, mantap!"</p>
-                    <h4>- Bima Pratama</h4>
-                    <span>Founder EduStart</span>
+                <div style="background:#111827; border-radius:20px; padding:30px; border:1px solid #1F2937;">
+                    <i style="color:#00E5FF; font-size:2rem; margin-bottom:15px; opacity:0.5;" class="fas fa-quote-left"></i>
+                    <p style="color:#D1D5DB; line-height:1.6; margin-bottom:15px;">"AI Chatbot untuk customer service 24 jam, mantap!"</p>
+                    <h4 style="margin-bottom:5px;">- Bima Pratama</h4>
+                    <span style="color:#9CA3AF; font-size:0.8rem;">Founder EduStart</span>
                 </div>
-                <div class="testimoni-card">
-                    <i class="fas fa-quote-left"></i>
-                    <p>"Dashboard admin saya jadi lebih profesional dan mudah digunakan."</p>
-                    <h4>- Dewi Lestari</h4>
-                    <span>Manajer Operasional</span>
+                <div style="background:#111827; border-radius:20px; padding:30px; border:1px solid #1F2937;">
+                    <i style="color:#00E5FF; font-size:2rem; margin-bottom:15px; opacity:0.5;" class="fas fa-quote-left"></i>
+                    <p style="color:#D1D5DB; line-height:1.6; margin-bottom:15px;">"Dashboard admin saya jadi lebih profesional dan mudah digunakan."</p>
+                    <h4 style="margin-bottom:5px;">- Dewi Lestari</h4>
+                    <span style="color:#9CA3AF; font-size:0.8rem;">Manajer Operasional</span>
                 </div>
-                <div class="testimoni-card">
-                    <i class="fas fa-quote-left"></i>
-                    <p>"Toko online saya langsung ramai pengunjung setelah pakai jasa FUADITECH!"</p>
-                    <h4>- Rizky Fadillah</h4>
-                    <span>Owner Fashion Store</span>
+                <div style="background:#111827; border-radius:20px; padding:30px; border:1px solid #1F2937;">
+                    <i style="color:#00E5FF; font-size:2rem; margin-bottom:15px; opacity:0.5;" class="fas fa-quote-left"></i>
+                    <p style="color:#D1D5DB; line-height:1.6; margin-bottom:15px;">"Toko online saya langsung ramai pengunjung setelah pakai jasa FUADITECH!"</p>
+                    <h4 style="margin-bottom:5px;">- Rizky Fadillah</h4>
+                    <span style="color:#9CA3AF; font-size:0.8rem;">Owner Fashion Store</span>
                 </div>
             </div>
         </div>
@@ -96,8 +102,11 @@
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
-            <p>© 2026 FUADITECH STUDIO. All rights reserved.</p>
-            <p>Build Smart. Grow Faster. | Mengubah Ide Menjadi Solusi Digital.</p>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+                <img src="assets/images/logo.png" alt="FUADITECH STUDIO" style="height:50px; width:auto;" />
+                <p>© 2026 FUADITECH STUDIO. All rights reserved.</p>
+                <p>Build Smart. Grow Faster. | Mengubah Ide Menjadi Solusi Digital.</p>
+            </div>
         </div>
     </footer>
 
