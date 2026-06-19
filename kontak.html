@@ -11,8 +11,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1B8P5EC0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-NK1B8P5EC0');
     </script>
@@ -24,16 +23,23 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                FUADITECH<br />
-                <span class="logo-studio">STUDIO</span>
+                <a href="index.html" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:white;">
+                    <img src="assets/images/logo.png" alt="FUADITECH STUDIO" style="height:40px; width:auto;" />
+                    <div>
+                        FUADITECH<br />
+                        <span class="logo-studio">STUDIO</span>
+                    </div>
+                </a>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tentang.html">Tentang</a></li>
                 <li><a href="layanan.html">Layanan</a></li>
                 <li><a href="portofolio.html">Portofolio</a></li>
+                <li><a href="publikasi.html">Publikasi</a></li>
                 <li><a href="harga.html">Harga</a></li>
                 <li><a href="testimoni.html">Testimoni</a></li>
+                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="kontak.html" class="active">Kontak</a></li>
             </ul>
             <a href="https://wa.me/62882007027443" class="btn-konsultasi" target="_blank">Konsultasi Gratis</a>
@@ -50,27 +56,27 @@
     </section>
 
     <!-- ===== KONTAK ===== -->
-    <section class="kontak">
+    <section style="padding:80px 0; background:#0A0A0F;">
         <div class="container">
-            <div class="kontak-wrapper">
-                <div class="kontak-info">
-                    <h2>Hubungi <span class="gradient-text">Kami</span></h2>
-                    <p>Siap membantu mewujudkan ide digital Anda!</p>
-                    <div class="info-item"><i class="fab fa-whatsapp"></i> +62 882-0070-27443</div>
-                    <div class="info-item"><i class="fas fa-envelope"></i> fuaditech@gmail.com</div>
-                    <div class="info-item"><i class="fab fa-instagram"></i> @fuaditechstudio</div>
-                    <div class="social">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:50px; background:#111827; border-radius:30px; padding:50px; border:1px solid #1F2937;">
+                <div>
+                    <h2 style="font-size:2rem; margin-bottom:15px;">Hubungi <span class="gradient-text">Kami</span></h2>
+                    <p style="color:#9CA3AF; margin-bottom:30px;">Siap membantu mewujudkan ide digital Anda!</p>
+                    <div style="margin:15px 0; display:flex; align-items:center; gap:12px;"><i style="color:#00E5FF; width:25px;" class="fab fa-whatsapp"></i> +62 882-0070-27443</div>
+                    <div style="margin:15px 0; display:flex; align-items:center; gap:12px;"><i style="color:#00E5FF; width:25px;" class="fas fa-envelope"></i> fuaditech@gmail.com</div>
+                    <div style="margin:15px 0; display:flex; align-items:center; gap:12px;"><i style="color:#00E5FF; width:25px;" class="fab fa-instagram"></i> @fuaditechstudio</div>
+                    <div style="margin-top:30px; display:flex; gap:20px;">
+                        <a href="#" style="color:#9CA3AF; font-size:1.5rem; transition:0.3s;"><i class="fab fa-github"></i></a>
+                        <a href="#" style="color:#9CA3AF; font-size:1.5rem; transition:0.3s;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color:#9CA3AF; font-size:1.5rem; transition:0.3s;"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="kontak-form">
+                <div>
                     <form id="contactForm">
-                        <input type="text" placeholder="Nama Lengkap" required />
-                        <input type="email" placeholder="Email" />
-                        <textarea rows="4" placeholder="Pesan / Kebutuhan Anda..."></textarea>
-                        <button type="submit" class="btn-submit">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
+                        <input type="text" placeholder="Nama Lengkap" required style="width:100%; padding:14px; margin:10px 0; background:#0A0A0F; border:1px solid #1F2937; border-radius:12px; color:white;" />
+                        <input type="email" placeholder="Email" style="width:100%; padding:14px; margin:10px 0; background:#0A0A0F; border:1px solid #1F2937; border-radius:12px; color:white;" />
+                        <textarea rows="4" placeholder="Pesan / Kebutuhan Anda..." style="width:100%; padding:14px; margin:10px 0; background:#0A0A0F; border:1px solid #1F2937; border-radius:12px; color:white;"></textarea>
+                        <button type="submit" style="width:100%; background:linear-gradient(135deg,#00E5FF,#007BFF); padding:14px; border:none; border-radius:40px; color:white; font-weight:600; cursor:pointer;">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
@@ -80,14 +86,39 @@
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
-            <p>© 2026 FUADITECH STUDIO. All rights reserved.</p>
-            <p>Build Smart. Grow Faster. | Mengubah Ide Menjadi Solusi Digital.</p>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+                <img src="assets/images/logo.png" alt="FUADITECH STUDIO" style="height:50px; width:auto;" />
+                <p>© 2026 FUADITECH STUDIO. All rights reserved.</p>
+                <p>Build Smart. Grow Faster. | Mengubah Ide Menjadi Solusi Digital.</p>
+            </div>
         </div>
     </footer>
 
     <a href="https://wa.me/62882007027443" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
-    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.querySelector('#contactForm input[placeholder="Nama Lengkap"]').value;
+            const email = document.querySelector('#contactForm input[placeholder="Email"]').value;
+            const message = document.querySelector('#contactForm textarea').value;
+            const waNumber = '62882007027443';
+            const text = `Halo FUADITECH STUDIO,%0A%0ANama: ${name}%0AEmail: ${email}%0APesan: ${message}`;
+            window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
+        });
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) backToTop.classList.add('show');
+            else backToTop.classList.remove('show');
+        });
+        backToTop.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('active'));
+        });
+    </script>
 </body>
 </html>
