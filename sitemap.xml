@@ -1,10 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url><loc>https://fuaditech-web.github.io/jasa-wbsite/</loc><priority>1.0</priority></url>
-    <url><loc>https://fuaditech-web.github.io/jasa-wbsite/tentang.html</loc><priority>0.9</priority></url>
-    <url><loc>https://fuaditech-web.github.io/jasa-wbsite/layanan.html</loc><priority>0.9</priority></url>
-    <url><loc>https://fuaditech-web.github.io/jasa-wbsite/portofolio.html</loc><priority>0.8</priority></url>
-    <url><loc>https://fuaditech-web.github.io/jasa-wbsite/harga.html</loc><priority>0.8</priority></url>
-    <url><loc>https://fuaditech-web.github.io/jasa-wbsite/testimoni.html</loc><priority>0.7</priority></url>
-    <url><loc>https://fuaditech-web.github.io/jasa-wbsite/kontak.html</loc><priority>0.7</priority></url>
+
+    <url>
+        <loc>https://fudaitech.com/</loc>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://fudaitech.com/tentang.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://fudaitech.com/layanan.html</loc>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://fudaitech.com/portofolio.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fudaitech.com/harga.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://fudaitech.com/testimoni.html</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://fudaitech.com/kontak.html</loc>
+        <priority>0.7</priority>
+    </url>
+
 </urlset>
