@@ -1,0 +1,25 @@
+{
+    "testimonials": [
+        {
+            "id": "TST-001",
+            "name": "Andi Wijaya",
+            "text": "Website company profile saya jadi super modern. Harga terjangkau banget!",
+            "rating": 5,
+            "status": "published"
+        },
+        {
+            "id": "TST-002",
+            "name": "Siti Rahma",
+            "text": "Joki coding skripsi rapi, nilai A! Recommended untuk mahasiswa.",
+            "rating": 5,
+            "status": "published"
+        },
+        {
+            "id": "TST-003",
+            "name": "Budi Santoso",
+            "text": "Makalah ilmiah jadi cepat dan rapi, harga cuma Rp70.000!",
+            "rating": 5,
+            "status": "draft"
+        }
+    ]
+}

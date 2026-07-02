@@ -1,0 +1,32 @@
+{
+    "services": [
+        {
+            "id": "SRV-001",
+            "name": "Company Profile",
+            "description": "UMKM, Perusahaan, Sekolah, Organisasi",
+            "price": 299000,
+            "status": "active"
+        },
+        {
+            "id": "SRV-002",
+            "name": "Toko Online (E-Commerce)",
+            "description": "Keranjang, Checkout, Pembayaran",
+            "price": 599000,
+            "status": "active"
+        },
+        {
+            "id": "SRV-003",
+            "name": "Joki Coding",
+            "description": "C++, Java, Python, PHP, JS",
+            "price": 50000,
+            "status": "active"
+        },
+        {
+            "id": "SRV-004",
+            "name": "Chatbot AI",
+            "description": "Customer service, ChatGPT",
+            "price": 999000,
+            "status": "inactive"
+        }
+    ]
+}
