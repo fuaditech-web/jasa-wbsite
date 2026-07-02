@@ -1,0 +1,28 @@
+{
+    "clients": [
+        {
+            "id": "CLN-001",
+            "name": "Andi Wijaya",
+            "email": "andi@email.com",
+            "phone": "0812-3456-7890",
+            "total_order": 3,
+            "status": "active"
+        },
+        {
+            "id": "CLN-002",
+            "name": "Siti Rahma",
+            "email": "siti@email.com",
+            "phone": "0812-3456-7891",
+            "total_order": 5,
+            "status": "active"
+        },
+        {
+            "id": "CLN-003",
+            "name": "Budi Santoso",
+            "email": "budi@email.com",
+            "phone": "0812-3456-7892",
+            "total_order": 1,
+            "status": "active"
+        }
+    ]
+}
