@@ -12,7 +12,7 @@ FUADITECH STUDIO adalah website profesional untuk layanan pembuatan website, sol
 
 ## ✨ Fitur
 
-- ✅ 7 Halaman (Home, Tentang, Layanan, Portofolio, Harga, Testimoni, Kontak)
+- ✅ 9 Halaman (Home, Tentang, Layanan, Portofolio, Publikasi, Harga, Testimoni, FAQ, Kontak)
 - ✅ 19+ Layanan Digital
 - ✅ 4 Paket Harga Terjangkau
 - ✅ Desain Modern & Responsive
@@ -22,7 +22,7 @@ FUADITECH STUDIO adalah website profesional untuk layanan pembuatan website, sol
 
 ## 🌐 Akses Online
 
-[https://fuaditech-web.github.io/jasa-wbsite/](https://fuaditech-web.github.io/jasa-wbsite/)
+[https://fuaditech.com/](https://fuaditech.com/)
 
 ## 📱 Kontak
 
