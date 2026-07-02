@@ -1,0 +1,36 @@
+{
+    "orders": [
+        {
+            "id": "ORD-001",
+            "client": "Andi Wijaya",
+            "service": "Company Profile",
+            "price": 299000,
+            "status": "process",
+            "date": "2026-06-15"
+        },
+        {
+            "id": "ORD-002",
+            "client": "Siti Rahma",
+            "service": "Website Berita",
+            "price": 499000,
+            "status": "waiting",
+            "date": "2026-06-16"
+        },
+        {
+            "id": "ORD-003",
+            "client": "Budi Santoso",
+            "service": "Makalah Ilmiah",
+            "price": 70000,
+            "status": "done",
+            "date": "2026-06-14"
+        },
+        {
+            "id": "ORD-004",
+            "client": "Dewi Lestari",
+            "service": "Dashboard Admin",
+            "price": 599000,
+            "status": "process",
+            "date": "2026-06-17"
+        }
+    ]
+}

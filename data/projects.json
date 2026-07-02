@@ -1,0 +1,20 @@
+{
+    "projects": [
+        {
+            "id": "PRJ-001",
+            "name": "Company Profile Cafe",
+            "client": "Andi Wijaya",
+            "progress": 75,
+            "deadline": "2026-06-30",
+            "status": "process"
+        },
+        {
+            "id": "PRJ-002",
+            "name": "Website Berita Kampus",
+            "client": "Siti Rahma",
+            "progress": 30,
+            "deadline": "2026-07-15",
+            "status": "waiting"
+        }
+    ]
+}
