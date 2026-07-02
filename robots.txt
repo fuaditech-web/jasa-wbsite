@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://fuaditech-web.github.io/jasa-wbsite/sitemap.xml
+Sitemap: https://fuaditech.com/sitemap.xml
 Crawl-delay: 5
