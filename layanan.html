@@ -11,8 +11,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1B8P5EC0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-NK1B8P5EC0');
     </script>
@@ -24,16 +23,23 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                FUADITECH<br />
-                <span class="logo-studio">STUDIO</span>
+                <a href="index.html" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:white;">
+                    <img src="assets/images/logo.png" alt="FUADITECH STUDIO" style="height:40px; width:auto;" />
+                    <div>
+                        FUADITECH<br />
+                        <span class="logo-studio">STUDIO</span>
+                    </div>
+                </a>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tentang.html">Tentang</a></li>
                 <li><a href="layanan.html" class="active">Layanan</a></li>
                 <li><a href="portofolio.html">Portofolio</a></li>
+                <li><a href="publikasi.html">Publikasi</a></li>
                 <li><a href="harga.html">Harga</a></li>
                 <li><a href="testimoni.html">Testimoni</a></li>
+                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="kontak.html">Kontak</a></li>
             </ul>
             <a href="https://wa.me/62882007027443" class="btn-konsultasi" target="_blank">Konsultasi Gratis</a>
@@ -50,7 +56,7 @@
     </section>
 
     <!-- ===== LAYANAN ===== -->
-    <section class="layanan" style="background:#0A0A0F;">
+    <section style="padding:80px 0; background:#0A0A0F;">
         <div class="container">
             <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:30px;">
                 <div class="layanan-card"><div class="icon"><i class="fas fa-building"></i></div><h3>Company Profile</h3><p>UMKM, Perusahaan, Sekolah, Organisasi</p><div class="price">Rp299.000</div><a href="https://wa.me/62882007027443" class="btn-small" target="_blank">Pesan</a></div>
@@ -79,8 +85,11 @@
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
-            <p>© 2026 FUADITECH STUDIO. All rights reserved.</p>
-            <p>Build Smart. Grow Faster. | Mengubah Ide Menjadi Solusi Digital.</p>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+                <img src="assets/images/logo.png" alt="FUADITECH STUDIO" style="height:50px; width:auto;" />
+                <p>© 2026 FUADITECH STUDIO. All rights reserved.</p>
+                <p>Build Smart. Grow Faster. | Mengubah Ide Menjadi Solusi Digital.</p>
+            </div>
         </div>
     </footer>
 
