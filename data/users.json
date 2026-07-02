@@ -1,0 +1,31 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Admin Utama",
+            "email": "admin@fuaditech.com",
+            "username": "admin",
+            "password": "curugputri",
+            "role": "Super Admin",
+            "status": "active"
+        },
+        {
+            "id": 2,
+            "name": "Staff Marketing",
+            "email": "marketing@fuaditech.com",
+            "username": "marketing",
+            "password": "marketing123",
+            "role": "Staff",
+            "status": "active"
+        },
+        {
+            "id": 3,
+            "name": "Staff Developer",
+            "email": "dev@fuaditech.com",
+            "username": "developer",
+            "password": "dev123",
+            "role": "Staff",
+            "status": "inactive"
+        }
+    ]
+}
