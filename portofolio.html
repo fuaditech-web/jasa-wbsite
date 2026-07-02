@@ -11,12 +11,259 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK1B8P5EC0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-NK1B8P5EC0');
     </script>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💻%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📁%3C/text%3E%3C/svg%3E">
+    <style>
+        .page-banner {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #0A0A0F, #111827);
+            border-bottom: 1px solid #1F2937;
+        }
+        .page-banner h1 { font-size: 2.5rem; font-weight: 800; color: white; }
+        .page-banner p { color: #9CA3AF; margin-top: 10px; }
+
+        .filter-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 40px 0;
+        }
+        .filter-btn {
+            padding: 10px 24px;
+            border-radius: 30px;
+            border: 1px solid #1F2937;
+            background: transparent;
+            color: #D1D5DB;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .filter-btn:hover {
+            border-color: #00E5FF;
+            color: #00E5FF;
+        }
+        .filter-btn.active {
+            background: #00E5FF;
+            color: #0A0A0F;
+            border-color: #00E5FF;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .portfolio-card {
+            background: #111827;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #1F2937;
+            transition: 0.3s;
+        }
+        .portfolio-card:hover {
+            border-color: #00E5FF;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,229,255,0.05);
+        }
+        .portfolio-card .img-placeholder {
+            height: 220px;
+            background: linear-gradient(135deg, #1A1A2E, #0A0A0F);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #00E5FF;
+            opacity: 0.6;
+            border-bottom: 1px solid #1F2937;
+        }
+        .portfolio-card .card-body {
+            padding: 20px 25px 25px;
+        }
+        .portfolio-card .card-body .category {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            background: rgba(0,229,255,0.1);
+            color: #00E5FF;
+            border: 1px solid rgba(0,229,255,0.2);
+            margin-bottom: 10px;
+        }
+        .portfolio-card .card-body h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .portfolio-card .card-body p {
+            color: #9CA3AF;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .portfolio-card .card-body .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        .portfolio-card .card-body .tech-tags span {
+            padding: 4px 12px;
+            background: #1A1A2E;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            color: #D1D5DB;
+            border: 1px solid #1F2937;
+        }
+        .portfolio-card .card-body .card-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .portfolio-card .card-body .card-actions a,
+        .portfolio-card .card-body .card-actions button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .portfolio-card .card-body .card-actions .btn-demo {
+            background: linear-gradient(135deg, #00E5FF, #007BFF);
+            color: white;
+        }
+        .portfolio-card .card-body .card-actions .btn-demo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,229,255,0.3);
+        }
+        .portfolio-card .card-body .card-actions .btn-detail {
+            background: transparent;
+            border: 1px solid #1F2937;
+            color: #D1D5DB;
+        }
+        .portfolio-card .card-body .card-actions .btn-detail:hover {
+            border-color: #00E5FF;
+            color: #00E5FF;
+        }
+
+        /* ===== MODAL DETAIL ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal.show {
+            display: flex;
+        }
+        .modal-content {
+            background: #111827;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 100%;
+            padding: 30px;
+            border: 1px solid #1F2937;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .modal-content .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: #9CA3AF;
+            cursor: pointer;
+            transition: 0.3s;
+            background: none;
+            border: none;
+        }
+        .modal-content .close-btn:hover {
+            color: #00E5FF;
+        }
+        .modal-content h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        .modal-content .modal-body p {
+            color: #9CA3AF;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .modal-content .modal-body strong {
+            color: #D1D5DB;
+        }
+        .modal-content .modal-body .modal-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+        .modal-content .modal-body .modal-tech span {
+            padding: 4px 12px;
+            background: #1A1A2E;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            color: #D1D5DB;
+            border: 1px solid #1F2937;
+        }
+        .modal-content .modal-body .modal-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .modal-content .modal-body .modal-actions a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        .modal-content .modal-body .modal-actions .btn-modal-demo {
+            background: linear-gradient(135deg, #00E5FF, #007BFF);
+            color: white;
+        }
+        .modal-content .modal-body .modal-actions .btn-modal-wa {
+            background: #25D366;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+            .modal-content {
+                padding: 20px;
+                margin: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -24,17 +271,22 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                FUADITECH<br />
-                <span class="logo-studio">STUDIO</span>
+                <a href="index.html" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:white;">
+                    <img src="assets/images/logo.png" alt="FUADITECH STUDIO" style="height:40px; width:auto;" />
+                    <div>FUADITECH<br /><span class="logo-studio">STUDIO</span></div>
+                </a>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tentang.html">Tentang</a></li>
                 <li><a href="layanan.html">Layanan</a></li>
                 <li><a href="portofolio.html" class="active">Portofolio</a></li>
+                <li><a href="publikasi.html">Publikasi</a></li>
                 <li><a href="harga.html">Harga</a></li>
                 <li><a href="testimoni.html">Testimoni</a></li>
+                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="admin/" style="color:#00E5FF; font-weight:600;"><i class="fas fa-user-cog"></i> Admin</a></li>
             </ul>
             <a href="https://wa.me/62882007027443" class="btn-konsultasi" target="_blank">Konsultasi Gratis</a>
             <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
@@ -44,32 +296,182 @@
     <!-- ===== BANNER ===== -->
     <section class="page-banner">
         <div class="container">
-            <h1>Portofolio <span class="gradient-text">Terbaru</span></h1>
-            <p>Beberapa project yang telah kami kerjakan</p>
+            <h1>📸 Portofolio <span style="color:#00E5FF;">Terbaru</span></h1>
+            <p>Beberapa project yang telah kami kerjakan untuk klien</p>
         </div>
     </section>
 
-    <!-- ===== PORTOFOLIO ===== -->
-    <section class="portofolio" style="background:#0A0A0F;">
+    <!-- ===== FILTER ===== -->
+    <div class="container">
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="website">Website</button>
+            <button class="filter-btn" data-filter="ai">AI & Chatbot</button>
+            <button class="filter-btn" data-filter="dashboard">Dashboard</button>
+            <button class="filter-btn" data-filter="sistem">Sistem Informasi</button>
+            <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+        </div>
+    </div>
+
+    <!-- ===== PORTFOLIO GRID ===== -->
+    <section style="padding:60px 0; background:#0A0A0F;">
         <div class="container">
-            <div class="portofolio-grid">
-                <div class="portofolio-card"><div class="portofolio-overlay"><i class="fas fa-store"></i><span>E-Commerce Platform</span></div></div>
-                <div class="portofolio-card"><div class="portofolio-overlay"><i class="fas fa-chart-pie"></i><span>Dashboard Admin</span></div></div>
-                <div class="portofolio-card"><div class="portofolio-overlay"><i class="fas fa-building"></i><span>Company Profile Premium</span></div></div>
-                <div class="portofolio-card"><div class="portofolio-overlay"><i class="fas fa-robot"></i><span>AI Chatbot Project</span></div></div>
-                <div class="portofolio-card"><div class="portofolio-overlay"><i class="fas fa-boxes"></i><span>Sistem Inventori</span></div></div>
-                <div class="portofolio-card"><div class="portofolio-overlay"><i class="fas fa-school"></i><span>Website Kampus</span></div></div>
-                <div class="portofolio-card"><div class="portofolio-overlay"><i class="fas fa-newspaper"></i><span>Portal Berita</span></div></div>
-                <div class="portofolio-card"><div class="portofolio-overlay"><i class="fas fa-file-alt"></i><span>Jurnal Online</span></div></div>
+            <div class="portfolio-grid" id="portfolioGrid">
+
+                <!-- Project 1: Company Profile -->
+                <div class="portfolio-card" data-category="website" data-project='{"id":"1","title":"Company Profile Cafe","category":"Website","desc":"Website modern untuk cafe dengan menu digital, galeri, dan sistem pemesanan online.","tech":["HTML","CSS","JavaScript"],"demo":"#","client":"Andi Wijaya"}'>
+                    <div class="img-placeholder"><i class="fas fa-building"></i></div>
+                    <div class="card-body">
+                        <span class="category">Website</span>
+                        <h3>Company Profile Cafe</h3>
+                        <p>Website modern untuk cafe dengan menu digital, galeri, dan sistem pemesanan online.</p>
+                        <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <div class="card-actions">
+                            <a href="#" class="btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <button class="btn-detail" onclick="openDetail(this)"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: AI Chatbot -->
+                <div class="portfolio-card" data-category="ai" data-project='{"id":"2","title":"AI Chatbot Customer Service","category":"AI & Chatbot","desc":"Chatbot AI berbasis ChatGPT untuk customer service 24 jam otomatis.","tech":["AI","ChatGPT","Node.js"],"demo":"#","client":"PT Maju Jaya"}'>
+                    <div class="img-placeholder"><i class="fas fa-robot"></i></div>
+                    <div class="card-body">
+                        <span class="category">AI & Chatbot</span>
+                        <h3>AI Chatbot Customer Service</h3>
+                        <p>Chatbot AI berbasis ChatGPT untuk customer service 24 jam otomatis.</p>
+                        <div class="tech-tags"><span>AI</span><span>ChatGPT</span><span>Node.js</span></div>
+                        <div class="card-actions">
+                            <a href="#" class="btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <button class="btn-detail" onclick="openDetail(this)"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Dashboard Admin -->
+                <div class="portfolio-card" data-category="dashboard" data-project='{"id":"3","title":"Dashboard Admin Bisnis","category":"Dashboard","desc":"Dashboard admin dengan grafik real-time, laporan penjualan, dan manajemen user.","tech":["React","Chart.js","Laravel"],"demo":"#","client":"PT Sukses Selalu"}'>
+                    <div class="img-placeholder"><i class="fas fa-chart-pie"></i></div>
+                    <div class="card-body">
+                        <span class="category">Dashboard</span>
+                        <h3>Dashboard Admin Bisnis</h3>
+                        <p>Dashboard admin dengan grafik real-time, laporan penjualan, dan manajemen user.</p>
+                        <div class="tech-tags"><span>React</span><span>Chart.js</span><span>Laravel</span></div>
+                        <div class="card-actions">
+                            <a href="#" class="btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <button class="btn-detail" onclick="openDetail(this)"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: E-Commerce -->
+                <div class="portfolio-card" data-category="ecommerce" data-project='{"id":"4","title":"Toko Online Fashion","category":"E-Commerce","desc":"Toko online lengkap dengan keranjang, checkout, dan pembayaran otomatis.","tech":["React","Node.js","Midtrans"],"demo":"#","client":"Fashion Store"}'>
+                    <div class="img-placeholder"><i class="fas fa-store"></i></div>
+                    <div class="card-body">
+                        <span class="category">E-Commerce</span>
+                        <h3>Toko Online Fashion</h3>
+                        <p>Toko online lengkap dengan keranjang, checkout, dan pembayaran otomatis.</p>
+                        <div class="tech-tags"><span>React</span><span>Node.js</span><span>Midtrans</span></div>
+                        <div class="card-actions">
+                            <a href="#" class="btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <button class="btn-detail" onclick="openDetail(this)"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Sistem Inventori -->
+                <div class="portfolio-card" data-category="sistem" data-project='{"id":"5","title":"Sistem Inventori Gudang","category":"Sistem Informasi","desc":"Sistem manajemen stok barang dengan notifikasi stok menipis dan laporan otomatis.","tech":["Laravel","MySQL","Bootstrap"],"demo":"#","client":"UD Makmur"}'>
+                    <div class="img-placeholder"><i class="fas fa-boxes"></i></div>
+                    <div class="card-body">
+                        <span class="category">Sistem Informasi</span>
+                        <h3>Sistem Inventori Gudang</h3>
+                        <p>Sistem manajemen stok barang dengan notifikasi stok menipis dan laporan otomatis.</p>
+                        <div class="tech-tags"><span>Laravel</span><span>MySQL</span><span>Bootstrap</span></div>
+                        <div class="card-actions">
+                            <a href="#" class="btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <button class="btn-detail" onclick="openDetail(this)"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Website Berita -->
+                <div class="portfolio-card" data-category="website" data-project='{"id":"6","title":"Portal Berita Kampus","category":"Website","desc":"Website berita modern dengan dashboard admin, SEO friendly, dan manajemen artikel.","tech":["PHP","MySQL","Bootstrap"],"demo":"#","client":"Universitas Terbaik"}'>
+                    <div class="img-placeholder"><i class="fas fa-newspaper"></i></div>
+                    <div class="card-body">
+                        <span class="category">Website</span>
+                        <h3>Portal Berita Kampus</h3>
+                        <p>Website berita modern dengan dashboard admin, SEO friendly, dan manajemen artikel.</p>
+                        <div class="tech-tags"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
+                        <div class="card-actions">
+                            <a href="#" class="btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <button class="btn-detail" onclick="openDetail(this)"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: AI Assistant -->
+                <div class="portfolio-card" data-category="ai" data-project='{"id":"7","title":"AI Assistant Perusahaan","category":"AI & Chatbot","desc":"Asisten AI yang menjawab pertanyaan tentang dokumen perusahaan dan FAQ otomatis.","tech":["OpenAI","Python","FastAPI"],"demo":"#","client":"PT Global Tech"}'>
+                    <div class="img-placeholder"><i class="fas fa-brain"></i></div>
+                    <div class="card-body">
+                        <span class="category">AI & Chatbot</span>
+                        <h3>AI Assistant Perusahaan</h3>
+                        <p>Asisten AI yang menjawab pertanyaan tentang dokumen perusahaan dan FAQ otomatis.</p>
+                        <div class="tech-tags"><span>OpenAI</span><span>Python</span><span>FastAPI</span></div>
+                        <div class="card-actions">
+                            <a href="#" class="btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <button class="btn-detail" onclick="openDetail(this)"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Sistem Absensi -->
+                <div class="portfolio-card" data-category="sistem" data-project='{"id":"8","title":"Sistem Absensi QR Code","category":"Sistem Informasi","desc":"Sistem absensi dengan QR Code, rekap kehadiran, dan export Excel.","tech":["Node.js","MongoDB","QR Code"],"demo":"#","client":"PT Maju Mundur"}'>
+                    <div class="img-placeholder"><i class="fas fa-fingerprint"></i></div>
+                    <div class="card-body">
+                        <span class="category">Sistem Informasi</span>
+                        <h3>Sistem Absensi QR Code</h3>
+                        <p>Sistem absensi dengan QR Code, rekap kehadiran, dan export Excel.</p>
+                        <div class="tech-tags"><span>Node.js</span><span>MongoDB</span><span>QR Code</span></div>
+                        <div class="card-actions">
+                            <a href="#" class="btn-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <button class="btn-detail" onclick="openDetail(this)"><i class="fas fa-info-circle"></i> Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tombol Load More -->
+            <div style="text-align:center; margin-top:50px;">
+                <a href="#" class="btn-primary" id="loadMoreBtn">Load More Project</a>
             </div>
         </div>
     </section>
 
+    <!-- ===== MODAL DETAIL ===== -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <h2 id="modalTitle">Detail Project</h2>
+            <div class="modal-body">
+                <p><strong>Kategori:</strong> <span id="modalCategory">-</span></p>
+                <p><strong>Deskripsi:</strong> <span id="modalDesc">-</span></p>
+                <p><strong>Klien:</strong> <span id="modalClient">-</span></p>
+                <div class="modal-tech" id="modalTech"></div>
+                <div class="modal-actions">
+                    <a href="#" class="btn-modal-demo" id="modalDemoLink"><i class="fas fa-external-link-alt"></i> Lihat Demo</a>
+                    <a href="https://wa.me/62882007027443" class="btn-modal-wa" target="_blank"><i class="fab fa-whatsapp"></i> Konsultasi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
-            <p>© 2026 FUADITECH STUDIO. All rights reserved.</p>
-            <p>Build Smart. Grow Faster. | Mengubah Ide Menjadi Solusi Digital.</p>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+                <p>© 2026 FUADITECH STUDIO. All rights reserved.</p>
+                <p>Build Smart. Grow Faster. | Mengubah Ide Menjadi Solusi Digital.</p>
+            </div>
         </div>
     </footer>
 
@@ -77,5 +479,117 @@
     <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
     <script src="js/main.js"></script>
+    <script>
+        // ===== FILTER =====
+        var filterBtns = document.querySelectorAll('.filter-btn');
+        var portfolioItems = document.querySelectorAll('.portfolio-card');
+
+        filterBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(function(b) { b.classList.remove('active'); });
+                this.classList.add('active');
+                var filterValue = this.getAttribute('data-filter');
+                portfolioItems.forEach(function(item) {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // ===== MODAL DETAIL =====
+        function openDetail(btn) {
+            var card = btn.closest('.portfolio-card');
+            var projectData = JSON.parse(card.getAttribute('data-project'));
+
+            document.getElementById('modalTitle').textContent = projectData.title;
+            document.getElementById('modalCategory').textContent = projectData.category;
+            document.getElementById('modalDesc').textContent = projectData.desc;
+            document.getElementById('modalClient').textContent = projectData.client || 'Tidak disebutkan';
+
+            // Tech tags
+            var techContainer = document.getElementById('modalTech');
+            techContainer.innerHTML = '';
+            projectData.tech.forEach(function(tag) {
+                var span = document.createElement('span');
+                span.textContent = tag;
+                techContainer.appendChild(span);
+            });
+
+            // Demo link
+            var demoLink = document.getElementById('modalDemoLink');
+            demoLink.href = projectData.demo || '#';
+
+            document.getElementById('detailModal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('detailModal').classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('detailModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // ===== LOAD MORE =====
+        document.getElementById('loadMoreBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('📂 Fitur ini akan menampilkan lebih banyak project. Tunggu update selanjutnya!');
+        });
+
+        // ===== BACK TO TOP =====
+        var backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        backToTop.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== HAMBURGER =====
+        var hamburger = document.getElementById('hamburger');
+        var navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // ===== TOMBOL DEMO =====
+        document.querySelectorAll('.btn-demo').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                var card = this.closest('.portfolio-card');
+                var projectData = JSON.parse(card.getAttribute('data-project'));
+                if (projectData.demo && projectData.demo !== '#') {
+                    window.open(projectData.demo, '_blank');
+                } else {
+                    alert('🔗 Link demo belum tersedia untuk project ini. Silakan hubungi kami untuk info lebih lanjut!');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
